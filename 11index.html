@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+    <div id="anamenu">
+        <h2>All Menu</h2>
+        <ul id="products" />
+        <ul id="menu" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="product" />
+    </div>
+
+    <div id="posts">
+
+        
+
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+	var mainuri = 'http://webservis.mmcsystem.com/api/Cafe/';
+        var uri = 'http://webservis.mmcsystem.com/api/Cafe/GetList';
+        var uri2 = 'http://webservis.mmcsystem.com/api/Cafe/GetDetay';
+        var anaid = 0;
+        var uriPosts = 'http://webservis.mmcsystem.com/api/Cafe/GetPosts'
+        $(document).ready(function () {
+            // Send an AJAX request
+         
+
+         $.ajax({
+				url: mainuri + "getoyun",
+				type:"GET",
+				success:function(data)
+				{
+					alert(data);
+				}
+			
+			
+			});
+        }
+		);
+
+       
+    </script>
+
+   
+</body>
+</html>
